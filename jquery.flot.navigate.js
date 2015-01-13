@@ -538,7 +538,7 @@ $special.draginit = $special.dragstart = $special.dragend = drag;
             panTimeout = null;
 
         function onDragStart(e) {
-            if (e.which != 1)  // only accept left-click
+            if (e.which != 1 && e.which != 0)  // only accept left-click (mouse move) or touch o (touch move)
                 return false;
             var c = plot.getPlaceholder().css('cursor');
             if (c)
